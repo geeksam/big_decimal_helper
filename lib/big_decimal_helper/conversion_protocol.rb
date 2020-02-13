@@ -14,7 +14,7 @@ module BigDecimalHelper
       def to_bd
         string_representation = to_s.gsub(/[^\-\d\.]/, '')
         string_representation = "0" if string_representation =~ /^\s*$/ # convert blanks to zero
-        BigDecimal.new(string_representation)
+        BigDecimal(string_representation)
       end
     end
   end
